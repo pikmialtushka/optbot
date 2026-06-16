@@ -4,7 +4,8 @@
     "builder": "NIXPACKS"
   },
   "deploy": {
-    "startCommand": "gunicorn server:app & python bot.py",
-    "restartPolicyType": "ON_FAILURE"
+    "startCommand": "gunicorn server:app",
+    "restartPolicyType": "ON_FAILURE",
+    "healthcheckPath": "/"
   }
 }
